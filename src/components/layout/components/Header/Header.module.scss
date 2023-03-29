@@ -1,0 +1,86 @@
+.wrapper {
+    --width-search: 361px;
+    --heigth-search: 46px;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 1px rgba(51, 49, 49, 0.12);
+}
+.inner {
+    width: var(--width-container);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+}
+.search {
+    position: relative;
+    display: flex;
+    border: 1.5px solid transparent;
+    align-items: center;
+    background: var(--background-color-gray1);
+    width: var(--width-search);
+    height: var(--heigth-search);
+    padding-left: 16px;
+    border-radius: 92px;
+    overflow: hidden;
+    input {
+        flex: 1;
+        height: 100%;
+        color: var(--text-color-black);
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        caret-color: var(--primary-color);
+    }
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+    &:focus-within {
+        border-color: var(--background-color-gray2);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: calc(var(--heigth-search) - 18px);
+        top: 9px;
+        right: 57px;
+        background-color: var(--background-color-gray1);
+    }
+}
+.search-clear,
+.loading {
+    border: none;
+    cursor: pointer;
+    color: var(--background-color-gray2);
+    font-size: 1.6rem;
+    margin-right: 14px;
+}
+.loading {
+}
+.search-btn {
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: var(--heigth-search);
+    &:hover {
+        background-color: var(--background-color-gray0);
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    &:active {
+        background-color: var(--background-color-gray1);
+    }
+}

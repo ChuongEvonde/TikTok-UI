@@ -1,0 +1,37 @@
+@import 'normalize.css';
+@font-face {
+    font-family: 'ProximaNova';
+    src: url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Bold.woff2)
+            format('woff2'),
+        url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Bold.woff)
+            format('woff'),
+        url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Bold.otf)
+            format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+:root {
+    --background-color-gray0: rgba(22, 24, 35, 0.03);
+
+    --background-color-gray1: rgba(22, 24, 35, 0.06);
+    --background-color-gray2: rgba(22, 24, 35, 0.2);
+    --primary-color: #fe2c55;
+    --text-color-black: #161823;
+    --header-height: 60px;
+    --width-container: 1150px;
+    --width-sidebar: 348px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'ProximaNova', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
